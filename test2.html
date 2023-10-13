@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        canvas#canv {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            z-index: -1;
+        }
+
+        .timer {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .input-container label {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .input-container input {
+            font-size: 18px;
+            padding: 10px;
+            width: 50px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .button-container {
+            display: flex;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 12px 24px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timer">
+        <span id="minutes">00</span>:<span id="seconds">00</span>
+    </div>
+    <div class="input-container">
+        <label for="inputMinutes">Minutes:</label>
+        <input type="number" id="inputMinutes" min="0">
+        <label for="inputSeconds">Seconds:</label>
+        <input type="number" id="inputSeconds" min="0" max="59">
+    </div>
+    <div class="button-container">
+        <button id="SetTime">Set Time</button>
+        <button id="Start">Start</button>
+        <button id="Stop">Stop</button>
+        <button id="Reset">Reset</button>
+    </div>
+    <canvas id="canv"></canvas>
+    <script src="test2.js"></script>
+</body>
+
+</html>
